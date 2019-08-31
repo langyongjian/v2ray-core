@@ -9,17 +9,18 @@
 // connections.
 package core
 
-//go:generate go run $GOPATH/src/v2ray.com/core/common/errors/errorgen/main.go -pkg core -path Core
+//go:generate go install "v2ray.com/core/common/errors/errorgen"
+//go:generate errorgen
 
 import (
 	"v2ray.com/core/common/serial"
 )
 
-var (
-	version  = "3.15"
+const (
+	version  = "4.20.0"
 	build    = "Custom"
-	codename = "die Commanderin"
-	intro    = "An unified platform for anti-censorship."
+	codename = "V2Fly, a community-driven edition of V2Ray."
+	intro    = "A unified platform for anti-censorship."
 )
 
 // Version returns V2Ray's version as a string, in the form of "x.y.z" where x, y and z are numbers.
